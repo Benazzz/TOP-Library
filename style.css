@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  width: 90%;
+  margin: auto;
+}
+
+.container, button {
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 3rem;
+  margin-bottom: 8rem;
+  align-items: stretch;
+}
+
+.item {
+  background: darkblue;
+  width: 100%; 
+  border-radius: 2rem;
+  border: 10px solid black;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.5rem;
+  justify-content: space-evenly;
+}
+
+.new-book {
+  display: block;
+  margin: 5rem auto;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+.author {
+  font-size: 2rem;
+}
+
+button {
+  background-color: black;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: none;
+}
+
+.read {
+  width: 25%;
+}
+
+.item > button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.remove {
+  background-color: red;
+}
+
+.completed {
+  background-color: green;
+  width: 25%;
+  cursor: default;
+}
+
+dialog, dialog button {
+  width: 25%;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  width: 30%;
+}
+
+input {
+  width: 300%;
+  height: 30px;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
