@@ -20,6 +20,28 @@ function addBookToLibrary() {
   const form = document.querySelector("form");
   const cancel = document.querySelector("#cancel");
 
+  const titleInput = document.querySelector("#title");
+  const authorInput = document.querySelector("#author");
+  const pagesInput = document.querySelector("#pages");
+
+  titleInput.addEventListener("invalid", () => {
+    titleInput.setCustomValidity("Title is required");
+  });
+
+  authorInput.addEventListener("invalid", () => {
+    authorInput.setCustomValidity("Author is required");
+  });
+
+  pagesInput.addEventListener("invalid", () => {
+    pagesInput.setCustomValidity("Pages are required");
+  });
+
+  titleInput.addEventListener("input", () => titleInput.setCustomValidity(""));
+  authorInput.addEventListener("input", () =>
+    authorInput.setCustomValidity(""),
+  );
+  pagesInput.addEventListener("input", () => pagesInput.setCustomValidity(""));
+
   button.addEventListener("click", () => {
     dialog.showModal();
   });
@@ -31,6 +53,7 @@ function addBookToLibrary() {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    z;
     const formData = new FormData(form);
     const title = formData.get("title");
     const author = formData.get("author");
