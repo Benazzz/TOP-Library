@@ -53,7 +53,6 @@ function addBookToLibrary() {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    z;
     const formData = new FormData(form);
     const title = formData.get("title");
     const author = formData.get("author");
